@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title> Philok Fest </title>
+    <link rel="stylesheet" href="style.css">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="responsive.css">
+    <!-- <link rel="stylesheet" href="js/leaflet/leaflet.css"> -->
+    <link rel="stylesheet" href="btn.css">
+</head>
+
+<body>
+    <ul class="navbar">
+        <li><a onclick="showContent('map1')">Interactive MAP</a></li>
+        <li class="center"> <a onclick="showContent('about')">About Us</a></li>
+        <li class="upward"> <a onclick="showContent('contact')">Contacts</a></li>
+        <!-- <li class="forward"><a href="#">Feedback</a></li> -->
+        <div class="btn-container">
+
+            <label class="switch btn-color-mode-switch">
+		        <input value="1" id="color_mode" name="color_mode" type="checkbox">
+		        <label class="btn-color-mode-switch-inner" data-off="TH" data-on="EN" for="color_mode"></label>
+            </label>
+
+        </div>
+
+    </ul>
+
+
+    <!-- sidebar -->
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+          <img src="image/NULOGO.png" alt="">
+        </span>
+
+                <div class="text logo-text">
+                    <span class="name">Phitlok Fest</span>
+                    <span class="profession">Naresuan University</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search ...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Cultural Types</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon'></i>
+                            <span class="text nav-text">Revenue</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-pie-chart-alt icon'></i>
+                            <span class="text nav-text">Analytics</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon'></i>
+                            <span class="text nav-text">Likes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-wallet icon'></i>
+                            <span class="text nav-text">Wallets</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <!-- <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li> -->
+
+                <li class="mode">
+                    <!-- <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div> -->
+                    <span class="mode-text text">powered by <img src="image/NULOGO.png" alt="logoimg"></span>
+
+                    <!-- <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div> -->
+                </li>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <div class="container">
+        <div id="map1" class="content-section active">
+            <!-- <div class="container">
+            <div class="wrap-form-map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" id=" map " style="height: 500px; width: 100p0x;"></div>
+        </div> -->
+            <!-- <div class="card">
+                <image src="image/NULOGO.png"></image>
+                <div class="card-details">
+                    <p class="text-title">Card title</p>
+                    <p class="text-body">Here are the details of the card</p>
+                </div>
+                <button class="card-button">More info</button>
+            </div> -->
+            <div id="map"></div>
+
+
+
+
+        </div>
+    </div>
+
+    <!-- about -->
+    <div class="container">
+        <div id="about" class="content-section">
+            <!-- <div class="container"> -->
+            <!-- ทีมพัฒนาระบบ -->
+            <div class="col-md-12">
+                <h2>ชื่อหน่วยงาน</h2>
+                <hr class="title-underline">
+                <p>
+                    สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง : Regional Center of Geo-Informatics and Space Technology, Lower Northern Region, Naresuan University
+                </p>
+
+                <!-- <div class="row ">
+                    <div class="p-t-45 p-b-30">
+                        <div class="wrap-text-delicious ">
+                            <span class="tit2 t-center">
+                            about team
+                        </span>
+
+                            <h3 id="sdt" class="tit12 t-center m-b-35 m-t-5">
+                                ทีมพัฒนาระบบ
+                            </h3>
+
+                            <p id="sdt_more">
+                                ทีมพัฒนาระบบเว็บไซต์ โดยทีมจาก สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง (GISTNU) ประกอบด้วย
+                            </p>
+                        </div>
+                    </div> -->
+
+                <div class="team-container">
+                    <!-- สมาชิกคนที่ 1 -->
+                    <div class="team-member">
+                        <img src="image/head_gistnu.png" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">ผู้ช่วยศาสตราจารย์ ดร.พลปรีชา ชิดบุรี</div>
+                            <div class="member-department"><strong>หน่วยงาน :
+                                </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
+                            <div class="member-position"><strong>ตำแหน่ง: </strong>ผู้อำนวยการ</div>
+                        </div>
+                    </div>
+
+                    <!-- สมาชิกคนที่ 2 -->
+                    <div class="team-member">
+                        <img src="image/tar.jpg" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">นายวรฤทธิ์ ประเสริฐ</div>
+                            <div class="member-department"><strong>หน่วยงาน :
+                                </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
+                            <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่วิจัย</div>
+                        </div>
+                    </div>
+
+                    <!-- สมาชิกคนที่ 3 -->
+                    <div class="team-member">
+                        <img src="image/buon.jpg" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">นายภาสุระ ศรีสุระ</div>
+                            <div class="member-department"><strong>หน่วยงาน :
+                                </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
+                            <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่บริหารงานทั่วไป</div>
+                        </div>
+                    </div>
+
+                    <!-- สมาชิกคนที่ 4 -->
+                    <div class="team-member">
+                        <img src="image/chompoo.png" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">นางสาวกมลฉัตร ศรีจะตะ</div>
+                            <div class="member-department"><strong>หน่วยงาน :
+                                </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
+                            <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
+                        </div>
+                    </div>
+                    <!-- สมาชิกคนที่ 5 -->
+                    <div class="team-member">
+                        <img src="image/pglof.png" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">นางสุพรรณี สงวนพัฒน์</div>
+                            <div class="member-department"><strong>หน่วยงาน :
+                                </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
+                            <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่บริหารงานทั่วไป</div>
+                        </div>
+                    </div>
+                    <!-- สมาชิกคนที่ 6 -->
+                    <div class="team-member">
+                        <img src="image/north1.jpg" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">นายชินกฤต แถมพยัคฆ์</div>
+                            <div class="member-department"><strong>หน่วยงาน :
+                                </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
+                            <div class="member-position"><strong>ตำแหน่ง : </strong>ผู้ช่วยโครงการ</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- contacts -->
+    <!-- <div class="container"> -->
+    <div id="contact" class="content-section">
+        <div class="contact_us_6">
+            <div class="responsive-container-block container">
+                <form class="form-box">
+                    <div class="container-block form-wrapper">
+                        <div class="mob-text">
+                            <p class="text-blk contactus-head">
+                                ติดต่อเรา
+                            </p>
+                            <p class="text-blk contactus-subhead">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis diam lectus sapien.
+                            </p>
+                        </div>
+                        <div class="responsive-container-block" id="i2cbk">
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-3">
+                                <p class="text-blk input-title">
+                                    FIRST NAME
+                                </p>
+                                <input class="input" id="ijowk-3" name="FirstName" placeholder="Please enter first name...">
+                            </div>
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ip1yp">
+                                <p class="text-blk input-title">
+                                    EMAIL
+                                </p>
+                                <input class="input" id="ipmgh-3" name="Email" placeholder="Please enter email...">
+                            </div>
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ih9wi">
+                                <p class="text-blk input-title">
+                                    PHONE NUMBER
+                                </p>
+                                <input class="input" id="imgis-3" name="PhoneNumber" placeholder="Please enter phone number...">
+                            </div>
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-3">
+                                <p class="text-blk input-title">
+                                    WHAT DO YOU HAVE IN MIND ?
+                                </p>
+                                <textarea class="textinput" id="i5vyy-3" placeholder="Please enter query..."></textarea>
+                            </div>
+                        </div>
+                        <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2">
+                    Submit
+                  </button>
+                    </div>
+                </form>
+                <div class="responsive-cell-block wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">
+                    <div class="map-part">
+                        <p class="text-blk map-contactus-head" id="w-c-s-fc_p-1-dm-id">
+                            GISTNU
+                        </p>
+                        <p class="text-blk map-contactus-subhead">
+                            Regional Center of Geo-Informatics and Space Technology, Lower Northern Region, Naresuan University สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง มหาวิทยาลัยนเรศวร
+                        </p>
+                        <div class="map-box container-block">
+                        </div>
+
+                        <div class="social-media-links mob">
+                            <a class="social-icon-link" href="#" id="ix94i-2-2">
+                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
+                            </a>
+                            <a class="social-icon-link" href="#" id="itixd">
+                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
+                            </a>
+                            <a class="social-icon-link" href="#" id="izxvt">
+                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
+                            </a>
+                            <a class="social-icon-link" href="#" id="izldf-2-2">
+                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <h1>Contact</h1> -->
+        <!-- <p>This is the contact page content. Here you can put contact details.</p> -->
+        <!-- <image src="image/NULOGO.png"></image> -->
+
+    </div>
+    <!-- </div> -->
+
+    <!-- <section class="map_box">
+        <div class="container">
+            <div class="wrap-form-map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" id=" map " style="height: 400px;"></div>
+        </div>
+    </section> -->
+
+
+    <div class="footer"><span id="year"></span><a onclick="showContent('map1')"><span>Interactive Map</span></a><a onclick="showContent('about')"><span>About</span></a><a onclick="showContent('contact')"><span>Contacts</span></a> &copy; 2024-2029 Naresuan University | All
+        Rights Reserved.</span>
+    </div>
+    <!-- Footer -->
+
+    <!-- <div class="footer">
+        &copy; 2024 – 2029 Naresuan University | All Rights Reserved
+        <br>
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>
+    </div> -->
+
+
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/leaflet/leaflet.js"></script>'
+    <!-- <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</body>
+
+</html>
