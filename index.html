@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="responsive.css">
     <!-- <link rel="stylesheet" href="js/leaflet/leaflet.css"> -->
     <link rel="stylesheet" href="btn.css">
+    <link rel="stylesheet" href="switch.css">
 </head>
 
 <body>
     <ul class="navbar">
-        <li><a onclick="showContent('map1')">Interactive MAP</a></li>
-        <li class="center"> <a onclick="showContent('about')">About Us</a></li>
-        <li class="upward"> <a onclick="showContent('contact')">Contacts</a></li>
+        <li><a onclick="showContent('map1')">แผนที่</a></li>
+        <li class="center"> <a onclick="showContent('about')">เกี่ยวกับ</a></li>
+        <li class="upward"> <a onclick="showContent('contact')">ติดต่อเรา</a></li>
         <!-- <li class="forward"><a href="#">Feedback</a></li> -->
         <div class="btn-container">
 
@@ -56,33 +57,45 @@
             <div class="menu">
 
                 <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search ...">
+                    <!-- <i class='bx bx-search icon'></i> -->
+                    <span class="text nav-text">เมนูวัฒนธรรม</span>
                 </li>
 
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-home-alt icon'></i>
-                            <span class="text nav-text">Cultural Types</span>
+                            <span class="text nav-text">ภูเขา</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
                         </a>
                     </li>
 
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
-                            <span class="text nav-text">Revenue</span>
+                            <span class="text nav-text">วัด</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
                         </a>
                     </li>
 
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Notifications</span>
+                            <span class="text nav-text">สถานที่สำคัญ</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
                         </a>
                     </li>
 
-                    <li class="nav-link">
+                    <!-- <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-pie-chart-alt icon'></i>
                             <span class="text nav-text">Analytics</span>
@@ -101,7 +114,7 @@
                             <i class='bx bx-wallet icon'></i>
                             <span class="text nav-text">Wallets</span>
                         </a>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>
@@ -342,8 +355,8 @@
     </section> -->
 
 
-    <div class="footer"><span id="year"></span><a onclick="showContent('map1')"><span>Interactive Map</span></a><a onclick="showContent('about')"><span>About</span></a><a onclick="showContent('contact')"><span>Contacts</span></a> &copy; 2024-2029 Naresuan University | All
-        Rights Reserved.</span>
+    <div class="footer"><span id="year"></span><a onclick="showContent('map1')"><span>แผนที่</span></a><a onclick="showContent('about')"><span>เกี่ยวกับ</span></a><a onclick="showContent('contact')"><span>ติดต่อเรา</span></a> &copy; 2024-2029 Naresuan University | All Rights
+        Reserved.</span>
     </div>
     <!-- Footer -->
 
