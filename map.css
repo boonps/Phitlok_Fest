@@ -1,0 +1,14 @@
+.leaflet-container {
+    height: 400px;
+    width: 600px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#map {
+    height: 55vh;
+    width: 100%;
+    /* margin-left: 8%; */
+    position: sticky;
+    border-radius: 25px;
+}

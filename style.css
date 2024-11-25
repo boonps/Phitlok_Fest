@@ -94,7 +94,7 @@ span {
     /* ===== Colors ===== */
     --body-color: #e4e9f7;
     --sidebar-color: #fff;
-    --primary-color: #008bf8;
+    --primary-color: #d0aaff;
     --primary-color-light: #ffffff;
     --toggle-color: #ddd;
     --text-color: #707070;
@@ -113,7 +113,7 @@ span {
 body.dark {
     --body-color: #18191a;
     --sidebar-color: #242526;
-    --primary-color: #008bf8;
+    --primary-color: #381167;
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
@@ -203,6 +203,8 @@ body.dark {
 .sidebar header .image-text {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    padding-top: 5%;
 }
 
 .sidebar header .logo-text {
@@ -231,7 +233,7 @@ header .image-text .profession {
 }
 
 .sidebar header .image img {
-    width: 50px;
+    width: 60px;
     border-radius: 6px;
 }
 
@@ -242,7 +244,7 @@ header .image-text .profession {
     transform: translateY(-50%) rotate(180deg);
     height: 25px;
     width: 25px;
-    background-color: var(--primary-color);
+    background-color: #381167;
     color: var(--sidebar-color);
     border-radius: 50%;
     display: flex;
@@ -516,12 +518,6 @@ nav.sticky .nav-links li a:hover {
     gap: 0.2rem;
     border-radius: 25px;
     z-index: 9;
-}
-
-#map {
-    height: 80vh;
-    width: 100%;
-    position: sticky;
 }
 
 
@@ -1304,8 +1300,8 @@ p {
     line-height: 1.7;
     color: #000000;
     margin: 0px;
-    /* text-align: justify; */
-    text-indent: 8%;
+    text-align: justify;
+    text-indent: 6%;
 }
 
 @media (min-width: 992px) {
@@ -1341,4 +1337,55 @@ ul {
 li {
     margin-bottom: 10px;
     /* เพิ่มระยะห่างรายการ */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    /* สีพื้นหลังของส่วน */
+    padding: 20px;
+    /* ระยะขอบภายใน */
+    border-radius: 25px;
+    /* มุมโค้ง */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* เงา */
+    flex-direction: column;
+    width: 85%;
+    height: 90%;
+    margin-left: 11%;
+}
+
+.header-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #324b60;
+    /* สีข้อความของ Title */
+}
+
+.header-title h2 {
+    margin: 0;
+    /* ยกเลิกระยะห่าง */
+    font-size: 1.5em;
+    padding-bottom: 5%;
+}
+
+.header-divider {
+    width: 3px;
+    height: 60px;
+    /* ความสูงของเส้น */
+    background-color: #c5c8af;
+    /* สีของเส้น */
+    margin: 0 20px;
+    /* ระยะห่างระหว่าง Title และ Description */
+}
+
+.header-description {
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;
+    color: #666;
+    /* สีข้อความของ Description */
+    line-height: 1.5;
+    /* ความสูงบรรทัด */
+    padding-bottom: 3%;
 }

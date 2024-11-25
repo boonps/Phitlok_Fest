@@ -16,6 +16,7 @@
     <!-- <link rel="stylesheet" href="js/leaflet/leaflet.css"> -->
     <link rel="stylesheet" href="btn.css">
     <link rel="stylesheet" href="switch.css">
+    <link rel="stylesheet" href="map.css">
 </head>
 
 <body>
@@ -67,7 +68,7 @@
                             <i class='bx bx-home-alt icon'></i>
                             <span class="text nav-text">ภูเขา</span>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" />
                                 <span class="slider"></span>
                               </label>
                         </a>
@@ -78,7 +79,7 @@
                             <i class='bx bx-bar-chart-alt-2 icon'></i>
                             <span class="text nav-text">วัด</span>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" />
                                 <span class="slider"></span>
                               </label>
                         </a>
@@ -89,7 +90,7 @@
                             <i class='bx bx-bell icon'></i>
                             <span class="text nav-text">สถานที่สำคัญ</span>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" />
                                 <span class="slider"></span>
                               </label>
                         </a>
@@ -146,38 +147,38 @@
     <!-- Content Sections -->
     <div class="container">
         <div id="map1" class="content-section active">
-            <!-- <div class="container">
-            <div class="wrap-form-map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" id=" map " style="height: 500px; width: 100p0x;"></div>
-        </div> -->
-            <!-- <div class="card">
-                <image src="image/NULOGO.png"></image>
-                <div class="card-details">
-                    <p class="text-title">Card title</p>
-                    <p class="text-body">Here are the details of the card</p>
+            <div class="header-container">
+                <div class="header-title">
+                    <h2>Cultural Site Map</h2>
                 </div>
-                <button class="card-button">More info</button>
-            </div> -->
-            <div id="map"></div>
+                <!-- <div class="header-divider"></div> -->
+                <div class="header-description">
+                    <p>
+                        โครงการพัฒนาระบบนิเวศเศรษฐกิจที่ขับเคลื่อนด้วยงานเทศการในท้องถิ่นเพื่อยกระดับประเพณีปิยราชัย อำเภอนครไทย จังหวัดพิษณุโลก สู่หนึ่งในเทศการสำคัญของชาติและรับรู้ในระดับนานาชาติ
+                    </p>
+                </div>
 
 
 
+                <div id="map"></div>
+
+            </div>
 
         </div>
-    </div>
 
-    <!-- about -->
-    <div class="container">
-        <div id="about" class="content-section">
-            <!-- <div class="container"> -->
-            <!-- ทีมพัฒนาระบบ -->
-            <div class="col-md-12">
-                <h2>ชื่อหน่วยงาน</h2>
-                <hr class="title-underline">
-                <p>
-                    สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง : Regional Center of Geo-Informatics and Space Technology, Lower Northern Region, Naresuan University
-                </p>
+        <!-- about -->
+        <div class="container">
+            <div id="about" class="content-section">
+                <!-- <div class="container"> -->
+                <!-- ทีมพัฒนาระบบ -->
+                <div class="col-md-12">
+                    <h2>ชื่อหน่วยงาน</h2>
+                    <hr class="title-underline">
+                    <p>
+                        สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง : Regional Center of Geo-Informatics and Space Technology, Lower Northern Region, Naresuan University
+                    </p>
 
-                <!-- <div class="row ">
+                    <!-- <div class="row ">
                     <div class="p-t-45 p-b-30">
                         <div class="wrap-text-delicious ">
                             <span class="tit2 t-center">
@@ -194,75 +195,75 @@
                         </div>
                     </div> -->
 
-                <div class="team-container">
-                    <!-- สมาชิกคนที่ 1 -->
-                    <div class="team-member">
-                        <img src="image/head_gistnu.png" alt="Profile Picture">
-                        <div class="member-info">
-                            <div class="member-name">ผู้ช่วยศาสตราจารย์ ดร.พลปรีชา ชิดบุรี</div>
-                            <div class="member-department"><strong>หน่วยงาน :
+                    <div class="team-container">
+                        <!-- สมาชิกคนที่ 1 -->
+                        <div class="team-member">
+                            <img src="image/head_gistnu.png" alt="Profile Picture">
+                            <div class="member-info">
+                                <div class="member-name">ผู้ช่วยศาสตราจารย์ ดร.พลปรีชา ชิดบุรี</div>
+                                <div class="member-department"><strong>หน่วยงาน :
                                 </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
-                            <div class="member-position"><strong>ตำแหน่ง: </strong>ผู้อำนวยการ</div>
+                                <div class="member-position"><strong>ตำแหน่ง: </strong>ผู้อำนวยการ</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- สมาชิกคนที่ 2 -->
-                    <div class="team-member">
-                        <img src="image/tar.jpg" alt="Profile Picture">
-                        <div class="member-info">
-                            <div class="member-name">นายวรฤทธิ์ ประเสริฐ</div>
-                            <div class="member-department"><strong>หน่วยงาน :
+                        <!-- สมาชิกคนที่ 2 -->
+                        <div class="team-member">
+                            <img src="image/tar.jpg" alt="Profile Picture">
+                            <div class="member-info">
+                                <div class="member-name">นายวรฤทธิ์ ประเสริฐ</div>
+                                <div class="member-department"><strong>หน่วยงาน :
                                 </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
-                            <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่วิจัย</div>
+                                <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่วิจัย</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- สมาชิกคนที่ 3 -->
-                    <div class="team-member">
-                        <img src="image/buon.jpg" alt="Profile Picture">
-                        <div class="member-info">
-                            <div class="member-name">นายภาสุระ ศรีสุระ</div>
-                            <div class="member-department"><strong>หน่วยงาน :
+                        <!-- สมาชิกคนที่ 3 -->
+                        <div class="team-member">
+                            <img src="image/buon.jpg" alt="Profile Picture">
+                            <div class="member-info">
+                                <div class="member-name">นายภาสุระ ศรีสุระ</div>
+                                <div class="member-department"><strong>หน่วยงาน :
                                 </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
-                            <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่บริหารงานทั่วไป</div>
+                                <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่บริหารงานทั่วไป</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- สมาชิกคนที่ 4 -->
-                    <div class="team-member">
-                        <img src="image/chompoo.png" alt="Profile Picture">
-                        <div class="member-info">
-                            <div class="member-name">นางสาวกมลฉัตร ศรีจะตะ</div>
-                            <div class="member-department"><strong>หน่วยงาน :
+                        <!-- สมาชิกคนที่ 4 -->
+                        <div class="team-member">
+                            <img src="image/chompoo.png" alt="Profile Picture">
+                            <div class="member-info">
+                                <div class="member-name">นางสาวกมลฉัตร ศรีจะตะ</div>
+                                <div class="member-department"><strong>หน่วยงาน :
                                 </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
-                            <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
+                                <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- สมาชิกคนที่ 5 -->
-                    <div class="team-member">
-                        <img src="image/pglof.png" alt="Profile Picture">
-                        <div class="member-info">
-                            <div class="member-name">นางสุพรรณี สงวนพัฒน์</div>
-                            <div class="member-department"><strong>หน่วยงาน :
+                        <!-- สมาชิกคนที่ 5 -->
+                        <div class="team-member">
+                            <img src="image/pglof.png" alt="Profile Picture">
+                            <div class="member-info">
+                                <div class="member-name">นางสุพรรณี สงวนพัฒน์</div>
+                                <div class="member-department"><strong>หน่วยงาน :
                                 </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
-                            <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่บริหารงานทั่วไป</div>
+                                <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่บริหารงานทั่วไป</div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- สมาชิกคนที่ 6 -->
-                    <div class="team-member">
-                        <img src="image/north1.jpg" alt="Profile Picture">
-                        <div class="member-info">
-                            <div class="member-name">นายชินกฤต แถมพยัคฆ์</div>
-                            <div class="member-department"><strong>หน่วยงาน :
+                        <!-- สมาชิกคนที่ 6 -->
+                        <div class="team-member">
+                            <img src="image/north1.jpg" alt="Profile Picture">
+                            <div class="member-info">
+                                <div class="member-name">นายชินกฤต แถมพยัคฆ์</div>
+                                <div class="member-department"><strong>หน่วยงาน :
                                 </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
-                            <div class="member-position"><strong>ตำแหน่ง : </strong>ผู้ช่วยโครงการ</div>
+                                <div class="member-position"><strong>ตำแหน่ง : </strong>ผู้ช่วยโครงการ</div>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 
@@ -356,7 +357,8 @@
 
 
     <div class="footer"><span id="year"></span><a onclick="showContent('map1')"><span>แผนที่</span></a><a onclick="showContent('about')"><span>เกี่ยวกับ</span></a><a onclick="showContent('contact')"><span>ติดต่อเรา</span></a> &copy; 2024-2029 Naresuan University | All Rights
-        Reserved.</span>
+        Reserved.
+        </span>
     </div>
     <!-- Footer -->
 
@@ -370,10 +372,10 @@
 
 
     <script src="js/sidebar.js"></script>
-    <script src="js/maps.js"></script>
     <script src="js/leaflet/leaflet.js"></script>'
+    <script src="js/maps.js"></script>
     <!-- <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
 </body>
 
 </html>
