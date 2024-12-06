@@ -1,37 +1,31 @@
-const map = L.map('map').setView([17.15092976291246, 100.83179957549375], 13);
+const map = L.map("map").setView([17.15092976291246, 100.83179957549375], 13);
 
-const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution:
+    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-const marker = L.marker([17.15092976291246, 100.83179957549375]).addTo(map)
-    .bindPopup('<b>เขาช้างล้วง</b><br />').openPopup();
-
-const circle = L.circle([17.15092976291246, 100.83179957549375], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(map).bindPopup('I am a circle.');
-
-const polygon = L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
-]).addTo(map).bindPopup('I am a polygon.');
-
-
-const popup = L.popup()
-    .setLatLng([17.15092976291246, 100.83179957549375])
-    .setContent('ที่นี่ เขาช้างล้วง')
-    .openOn(map);
-
 function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent(`You clicked the map at ${e.latlng.toString()}`)
-        .openOn(map);
+  popup
+    .setLatLng(e.latlng)
+    .setContent(`You clicked the map at ${e.latlng.toString()}`)
+    .openOn(map);
 }
 
-map.on('click', onMapClick);
+map.on("click", onMapClick);
+
+// Add GeoJSON Layer
+const geojsonLayer = L.geoJSON(geojsonPlaces, {
+  onEachFeature: function (feature, layer) {
+    if (feature.properties && feature.properties.place) {
+      layer.bindPopup(`<b>Place:</b> ${feature.properties.place}`);
+    }
+  },
+});
+
+// Add GeoJSON Layer to the map
+geojsonLayer.addTo(map);
+
+// Adjust the map view to fit the GeoJSON layer
+map.fitBounds(geojsonLayer.getBounds());
