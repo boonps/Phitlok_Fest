@@ -42,43 +42,35 @@ new L.basemapsSwitcher(
 
 // map.on("click", onMapClick);
 
-// Define custom icons
-const icons = {
-  mountain: L.icon({
-    iconUrl: "./image/map/mountain.png",
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
-    popupAnchor: [0, -32],
-  }),
-  temple: L.icon({
-    iconUrl: "./image/map/temple.png",
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
-    popupAnchor: [0, -32],
-  }),
-  landmark: L.icon({
-    iconUrl: "./image/map/landmark.png",
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
-    popupAnchor: [0, -32],
-  }),
-};
+// Function to create custom icons with a white circle and shadow
+function createCustomIcon(iconUrl) {
+  return L.divIcon({
+    className: "custom-icon-container",
+    html: `
+        <div class="circle"></div>
+        <img src="${iconUrl}" alt="Icon" />
+      `,
+    iconSize: [25, 25],
+    iconAnchor: [25, 25],
+    popupAnchor: [0, 0],
+  });
+}
 
 // Add GeoJSON Layer with custom icons
 const geojsonLayer = L.geoJSON(geojsonPlaces, {
   pointToLayer: function (feature, latlng) {
-    let icon = icons.landmark; // Default icon
+    let iconUrl = "image/map/landmark.png"; // Default icon
     if (feature.properties.place.includes("เขา")) {
-      icon = icons.mountain;
+      iconUrl = "image/map/mountain.png";
     } else if (feature.properties.place.includes("วัด")) {
-      icon = icons.temple;
+      iconUrl = "image/map/temple.png";
     }
 
-    return L.marker(latlng, { icon });
+    return L.marker(latlng, { icon: createCustomIcon(iconUrl) });
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties?.place) {
-      layer.bindPopup(`<b>ชื่อสถานที่:</b> ${feature.properties.place}`);
+      layer.bindPopup(`<b>Place:</b> ${feature.properties.place}`);
     }
   },
 });
