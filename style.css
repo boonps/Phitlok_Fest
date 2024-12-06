@@ -592,6 +592,7 @@ html {
     margin: 0 20px;
     transition: color 0.3s ease;
     font-family: Prompt;
+    cursor: pointer;
 }
 
 
@@ -1386,6 +1387,23 @@ li {
     width: 85%;
     height: 90%;
     margin-left: 11%;
+}
+
+.header-container2 {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    /* สีพื้นหลังของส่วน */
+    padding: 20px;
+    /* ระยะขอบภายใน */
+    border-radius: 25px;
+    /* มุมโค้ง */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* เงา */
+    flex-direction: column;
+    width: 300%;
+    height: 90%;
+    margin-left: -100%;
 }
 
 .header-title {
