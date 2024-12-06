@@ -8,7 +8,7 @@ new L.basemapsSwitcher(
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map), //DEFAULT MAP
-      icon: "../image/map/osm.png",
+      icon: "./image/map/osm.png",
       name: "OSM Map",
     },
     {
@@ -18,14 +18,14 @@ new L.basemapsSwitcher(
           attribution: "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ",
         }
       ),
-      icon: "../image/map/gray.png",
+      icon: "./image/map/gray.png",
       name: "Gray Map",
     },
     {
       layer: L.tileLayer("https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}", {
         attribution: "Map data: &copy; Google Map",
       }),
-      icon: "../image/map/satt.png",
+      icon: "./image/map/satt.png",
       name: "Satellite",
     },
   ],
@@ -45,19 +45,19 @@ new L.basemapsSwitcher(
 // Define custom icons
 const icons = {
   mountain: L.icon({
-    iconUrl: "../image/map/mountain.png",
+    iconUrl: "./image/map/mountain.png",
     iconSize: [32, 32],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
   }),
   temple: L.icon({
-    iconUrl: "../image/map/temple.png",
+    iconUrl: "./image/map/temple.png",
     iconSize: [32, 32],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
   }),
   landmark: L.icon({
-    iconUrl: "../image/map/landmark.png",
+    iconUrl: "./image/map/landmark.png",
     iconSize: [32, 32],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
