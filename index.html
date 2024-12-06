@@ -18,10 +18,12 @@
     <link rel="stylesheet" href="switch.css">
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="boxicons.css">
+    <link rel="stylesheet" href="imgbox.css">
 </head>
 
 <body>
     <ul class="navbar">
+        <li><a onclick="showContent('home')">หน้าแรก</a></li>
         <li><a onclick="showContent('map1')">แผนที่</a></li>
         <li class="center"> <a onclick="showContent('about')">เกี่ยวกับ</a></li>
         <li class="upward"> <a onclick="showContent('contact')">ติดต่อเรา</a></li>
@@ -145,6 +147,77 @@
         </div>
     </nav>
 
+
+    <!-- หน้าแรก -->
+    <div class="container">
+        <div id="home" class="content-section">
+            <!-- <h4>Horizontal Flip</h4> -->
+            <div class="flip">
+                <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">MOUNTAIN</hi>
+                </div>
+                <div class="back">
+                    <h2>Angular</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                </div>
+            </div>
+            <div class="flip">
+                <div class="front" style="background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">LAKE</hi>
+                </div>
+                <div class="back">
+                    <h2>Angular</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                </div>
+            </div>
+            <div class="flip">
+                <div class="front" style="background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">OCEAN</hi>
+                </div>
+                <div class="back">
+                    <h2>Angular</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <!-- vertical -->
+
+            <!-- <h4>Vertical Flip</h4> -->
+            <div class="flip flip-vertical">
+                <div class="front" style="background-image: url(https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">FOREST</hi>
+                </div>
+                <div class="back">
+                    <h2>Angular</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                </div>
+            </div>
+            <div class="flip flip-vertical">
+                <div class="front" style="background-image: url(https://images.pexels.com/photos/34950/pexels-photo.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">TRACK</hi>
+                </div>
+                <div class="back">
+                    <h2>Angular</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                </div>
+            </div>
+            <div class="flip flip-vertical">
+                <div class="front" style="background-image: url(https://images.pexels.com/photos/34546/sunset-lake-landscape-summer.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
+                    <h1 class="text-shadow">SWAMP</hi>
+                </div>
+                <div class="back">
+                    <h2>Angular</h2>
+                    <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Content Sections -->
     <div class="container">
         <div id="map1" class="content-section active">
@@ -166,20 +239,21 @@
             </div>
 
         </div>
+    </div>
 
-        <!-- about -->
-        <div class="container">
-            <div id="about" class="content-section">
-                <!-- <div class="container"> -->
-                <!-- ทีมพัฒนาระบบ -->
-                <div class="col-md-12">
-                    <h2>คณะวิจัย</h2>
-                    <hr class="title-underline">
-                    <p>
-                        มหาวิทยาลัยนเรศวร Naresuan University
-                    </p>
+    <!-- about -->
+    <div class="container">
+        <div id="about" class="content-section">
+            <!-- <div class="container"> -->
+            <!-- ทีมพัฒนาระบบ -->
+            <div class="col-md-12">
+                <h2>คณะวิจัย</h2>
+                <hr class="title-underline">
+                <p>
+                    มหาวิทยาลัยนเรศวร Naresuan University
+                </p>
 
-                    <!-- <div class="row ">
+                <!-- <div class="row ">
                     <div class="p-t-45 p-b-30">
                         <div class="wrap-text-delicious ">
                             <span class="tit2 t-center">
@@ -196,42 +270,42 @@
                         </div>
                     </div> -->
 
-                    <div class="team-container">
-                        <!-- สมาชิกคนที่ 1 -->
-                        <div class="team-member">
-                            <img src="image/49375.jpg" alt="Profile Picture">
-                            <div class="member-info">
-                                <div class="member-name">Mr.....................</div>
-                                <div class="member-department"><strong>หน่วยงาน :
+                <div class="team-container">
+                    <!-- สมาชิกคนที่ 1 -->
+                    <div class="team-member">
+                        <img src="image/49375.jpg" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">Mr.....................</div>
+                            <div class="member-department"><strong>หน่วยงาน :
                                 </strong>มหาวิทยาลัยนเรศวร</div>
-                                <div class="member-position"><strong>ตำแหน่ง: </strong>นักวิจัย</div>
-                            </div>
+                            <div class="member-position"><strong>ตำแหน่ง: </strong>นักวิจัย</div>
                         </div>
+                    </div>
 
-                        <!-- สมาชิกคนที่ 2 -->
-                        <div class="team-member">
-                            <img src="image/49375.jpg" alt="Profile Picture">
-                            <div class="member-info">
-                                <div class="member-name">Mr.....................</div>
-                                <div class="member-department"><strong>หน่วยงาน :
+                    <!-- สมาชิกคนที่ 2 -->
+                    <div class="team-member">
+                        <img src="image/49375.jpg" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">Mr.....................</div>
+                            <div class="member-department"><strong>หน่วยงาน :
                                 </strong>มหาวิทยาลัยนเรศวร</div>
-                                <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
-                            </div>
+                            <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
                         </div>
+                    </div>
 
-                        <!-- สมาชิกคนที่ 3 -->
-                        <div class="team-member">
-                            <img src="image/49375.jpg" alt="Profile Picture">
-                            <div class="member-info">
-                                <div class="member-name">Mr.....................</div>
-                                <div class="member-department"><strong>หน่วยงาน :
+                    <!-- สมาชิกคนที่ 3 -->
+                    <div class="team-member">
+                        <img src="image/49375.jpg" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">Mr.....................</div>
+                            <div class="member-department"><strong>หน่วยงาน :
                                 </strong>มหาวิทยาลัยนเรศวร</div>
-                                <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
-                            </div>
+                            <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
                         </div>
+                    </div>
 
-                        <!-- สมาชิกคนที่ 4 -->
-                        <!-- <div class="team-member">
+                    <!-- สมาชิกคนที่ 4 -->
+                    <!-- <div class="team-member">
                             <img src="image/NULOGO.png" alt="Profile Picture">
                             <div class="member-info">
                                 <div class="member-name">นางสาวกมลฉัตร ศรีจะตะ</div>
@@ -240,8 +314,8 @@
                                 <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
                             </div>
                         </div> -->
-                        <!-- สมาชิกคนที่ 5 -->
-                        <!-- <div class="team-member">
+                    <!-- สมาชิกคนที่ 5 -->
+                    <!-- <div class="team-member">
                             <img src="image/NULOGO.png" alt="Profile Picture">
                             <div class="member-info">
                                 <div class="member-name">นางสุพรรณี สงวนพัฒน์</div>
@@ -250,8 +324,8 @@
                                 <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่บริหารงานทั่วไป</div>
                             </div>
                         </div> -->
-                        <!-- สมาชิกคนที่ 6 -->
-                        <!-- <div class="team-member">
+                    <!-- สมาชิกคนที่ 6 -->
+                    <!-- <div class="team-member">
                             <img src="image/NULOGO.png" alt="Profile Picture">
                             <div class="member-info">
                                 <div class="member-name">นายชินกฤต แถมพยัคฆ์</div>
@@ -261,10 +335,10 @@
                             </div>
                         </div> -->
 
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -357,9 +431,16 @@
     </section> -->
 
 
-    <div class="footer"><span id="year"></span><a onclick="showContent('map1')"><span>แผนที่</span></a><a onclick="showContent('about')"><span>เกี่ยวกับ</span></a><a onclick="showContent('contact')"><span>ติดต่อเรา</span></a> &copy; 2024-2029 Naresuan University | All Rights
-        Reserved.
-        </span>
+    <div class="footer">
+        <span id="year"></span>
+        <!-- <a onclick="showContent('map1')">
+            <span>แผนที่</span></a>
+        <a onclick="showContent('about')">
+            <span>เกี่ยวกับ</span></a>
+        <a onclick="showContent('contact')">
+            <span>ติดต่อเรา</span></a>  -->
+        &copy; 2024-2029 Naresuan University | All Rights Reserved.
+
     </div>
     <!-- Footer -->
 
@@ -373,8 +454,9 @@
 
 
     <script src="js/sidebar.js"></script>
-    <script src="js/leaflet/leaflet.js"></script>'
+    <script src="js/leaflet/leaflet.js"></script>
     <script src="js/maps.js"></script>
+    <script src="js/bar.js"></script>
     <!-- <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
 
 </body>
