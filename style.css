@@ -1344,11 +1344,11 @@ p {
 }
 
 .title-underline {
-    margin-left: 30%;
-    height: 5px;
-    width: 40%;
-    background-color: #ff5800;
-    margin-top: 5px;
+    margin-left: 20%;
+    height: 7px;
+    width: 60%;
+    background-color: #009fcf;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -1458,7 +1458,7 @@ li {
 }
 
 .header-title h3 {
-    margin: 0;
+    margin: 16;
     /* ยกเลิกระยะห่าง */
     font-family: Prompt;
     font-size: 2.5em;
@@ -1483,4 +1483,18 @@ li {
     line-height: 1.5;
     /* ความสูงบรรทัด */
     padding-bottom: 3%;
+}
+
+.background-half {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    /* แค่ครึ่งหนึ่ง */
+    background-color: #add8e6;
+    /* สีฟ้า */
+    z-index: -1;
+    /* ส่งไปข้างหลัง */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
