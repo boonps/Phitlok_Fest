@@ -94,7 +94,7 @@ span {
     /* ===== Colors ===== */
     --body-color: #e4e9f7;
     --sidebar-color: #fff;
-    --primary-color: #f4ecff;
+    --primary-color: #5f5f5f2e;
     --primary-color-light: #ffffff;
     --toggle-color: #ddd;
     --text-color: #707070;
@@ -640,7 +640,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-content: space-between;
     justify-content: space-around;
     /* Show only active section */
@@ -1329,12 +1329,12 @@ img {
 p {
     font-family: Prompt;
     font-weight: 400;
-    font-size: 21px;
+    font-size: 22px;
     line-height: 1.7;
     color: #000000;
     margin: 0px;
-    /* text-align: justify; */
-    /* text-indent: 6%; */
+    text-align: justify;
+    text-indent: 6%;
 }
 
 @media (min-width: 992px) {
@@ -1386,7 +1386,7 @@ li {
     flex-direction: column;
     width: 85%;
     height: 90%;
-    margin-left: 11%;
+    margin-left: 0%;
 }
 
 .header-container2 {
@@ -1406,6 +1406,43 @@ li {
     margin-left: -100%;
 }
 
+.header-container3 {
+    width: 100%;
+    /* หรือปรับเป็นขนาดที่ต้องการ เช่น 80% */
+    max-width: 76%;
+    /* เพื่อไม่ให้กว้างเกินไป */
+    margin: 0 auto;
+    /* จัดให้อยู่ตรงกลาง */
+    padding: 20px;
+    /* เพิ่มช่องว่างภายใน container */
+    box-sizing: border-box;
+    /* นับ padding ในขนาด container */
+    background-color: #f9f9f9;
+    /* สีพื้นหลัง */
+    border-radius: 25px;
+    /* เพิ่มความโค้งให้ดูสวย */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงา */
+}
+
+
+/* ตั้งค่าเนื้อหา (ตัวหนังสือ) */
+
+.header-container3 h1,
+.header-container3 p {
+    margin: 0;
+    padding: 10px 0;
+    /* เว้นระยะด้านบนและล่าง */
+    font-size: 1.5em;
+    /* หรือปรับตามที่ต้องการ */
+    text-align: center;
+    /* จัดให้อยู่กลาง */
+    line-height: 1.5;
+    /* ระยะห่างระหว่างบรรทัด */
+    color: #333;
+    /* สีของข้อความ */
+}
+
 .header-title {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
@@ -1416,8 +1453,16 @@ li {
 .header-title h2 {
     margin: 0;
     /* ยกเลิกระยะห่าง */
-    font-size: 1.5em;
+    font-size: 2.5em;
     padding-bottom: 5%;
+}
+
+.header-title h3 {
+    margin: 0;
+    /* ยกเลิกระยะห่าง */
+    font-family: Prompt;
+    font-size: 2.5em;
+    padding-bottom: 2%;
 }
 
 .header-divider {
