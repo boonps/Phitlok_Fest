@@ -6,7 +6,7 @@ const geojsonPlaces = {
     {
       type: "Feature",
       properties: { no: 1, place: "เขาช้างล้วง" },
-      geometry: { type: "Point", coordinates: [100.8317119, 17.15259403] },
+      geometry: { type: "Point", coordinates: [100.8318152, 17.15084443] },
     },
     {
       type: "Feature",
@@ -64,7 +64,7 @@ const geojsonPlaces = {
     {
       type: "Feature",
       properties: { no: 12, place: "ถ้ำกาเล็ก" },
-      geometry: { type: "Point", coordinates: [100.8317119, 17.15259403] },
+      geometry: { type: "Point", coordinates: [100.8317005, 17.1523919] },
     },
     {
       type: "Feature",
