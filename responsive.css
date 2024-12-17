@@ -200,3 +200,53 @@ body {
         padding: 0 20px;
     }
 }
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        /* ลดขนาดฟอนต์เมื่อจอเล็กกว่า 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+        /* ลดขนาดฟอนต์เมื่อจอเล็กกว่า 480px */
+    }
+}
+
+
+/* สำหรับจอใหญ่ (Desktop) */
+
+@media (min-width: 1024px) {
+    .content {
+        padding: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* สำหรับจอขนาดกลาง (Tablet) */
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .content {
+        padding: 20px;
+        font-size: 1rem;
+    }
+}
+
+
+/* สำหรับจอขนาดเล็ก (Mobile) */
+
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 100%;
+    }
+}

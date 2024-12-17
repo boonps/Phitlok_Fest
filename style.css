@@ -94,7 +94,7 @@ span {
   /* ===== Colors ===== */
   --body-color: #e4e9f7;
   --sidebar-color: #fff;
-  --primary-color: #f4ecff;
+  --primary-color: #5f5f5f2e;
   --primary-color-light: #ffffff;
   --toggle-color: #ddd;
   --text-color: #707070;
@@ -552,7 +552,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 110%;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -569,10 +569,11 @@ html {
   background-color: #ffffff;
   padding: 30px 0;
   position: fixed;
-  width: 100%;
-  top: 0;
+  width: 40%;
+  top: 20px;
   z-index: 10;
-  border-radius: 30px;
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar links */
@@ -582,9 +583,10 @@ html {
   text-decoration: none;
   font-size: 25px;
   padding: 10px 20px;
-  margin: 0 20px;
+  margin: 0 0%;
   transition: color 0.3s ease;
   font-family: Prompt;
+  cursor: pointer;
 }
 
 /* Hover effect */
@@ -598,6 +600,25 @@ html {
 .content {
   padding-top: 70px;
   text-align: center;
+}
+
+/* แสดงเมนูแบบ Hamburger */
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    /* Center the navbar */
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px 0;
+    position: fixed;
+    width: 40%;
+    top: 20px;
+    z-index: 10;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Responsive styling */
@@ -628,8 +649,18 @@ html {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-content: space-between;
+  justify-content: space-around;
+  /* Show only active section */
+}
+
+.content-section.active2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* flex-direction: column; */
+  align-content: flex-end;
   justify-content: space-around;
   /* Show only active section */
 }
@@ -1313,12 +1344,12 @@ img {
 p {
   font-family: Prompt;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 22px;
   line-height: 1.7;
   color: #000000;
   margin: 0px;
-  /* text-align: justify; */
-  /* text-indent: 6%; */
+  text-align: justify;
+  text-indent: 6%;
 }
 
 @media (min-width: 992px) {
@@ -1328,11 +1359,11 @@ p {
 }
 
 .title-underline {
-  margin-left: 30%;
-  height: 5px;
-  width: 40%;
-  background-color: #ff5800;
-  margin-top: 5px;
+  margin-left: 20%;
+  height: 7px;
+  width: 60%;
+  background-color: #009fcf;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -1367,8 +1398,61 @@ li {
   /* เงา */
   flex-direction: column;
   width: 85%;
+  height: 110%;
+  margin-left: 0%;
+}
+
+.header-container2 {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  /* สีพื้นหลังของส่วน */
+  padding: 20px;
+  /* ระยะขอบภายใน */
+  border-radius: 25px;
+  /* มุมโค้ง */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* เงา */
+  flex-direction: column;
+  width: 300%;
   height: 90%;
-  margin-left: 11%;
+  margin-left: -100%;
+}
+
+.header-container3 {
+  width: 100%;
+  /* หรือปรับเป็นขนาดที่ต้องการ เช่น 80% */
+  max-width: 76%;
+  /* เพื่อไม่ให้กว้างเกินไป */
+  margin: 40px auto;
+  /* จัดให้อยู่ตรงกลาง */
+  padding: 20px;
+  /* เพิ่มช่องว่างภายใน container */
+  box-sizing: border-box;
+  /* นับ padding ในขนาด container */
+  background-color: #f9f9f9;
+  /* สีพื้นหลัง */
+  border-radius: 15px;
+  /* เพิ่มความโค้งให้ดูสวย */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* เพิ่มเงา */
+}
+
+/* ตั้งค่าเนื้อหา (ตัวหนังสือ) */
+
+.header-container3 h1,
+.header-container3 p {
+  margin: 0;
+  padding: 10px 0;
+  /* เว้นระยะด้านบนและล่าง */
+  font-size: 1.5em;
+  /* หรือปรับตามที่ต้องการ */
+  text-align: center;
+  /* จัดให้อยู่กลาง */
+  line-height: 1.5;
+  /* ระยะห่างระหว่างบรรทัด */
+  color: #333;
+  /* สีของข้อความ */
 }
 
 .header-title {
@@ -1381,8 +1465,16 @@ li {
 .header-title h2 {
   margin: 0;
   /* ยกเลิกระยะห่าง */
-  font-size: 1.5em;
+  font-size: 2.5em;
   padding-bottom: 5%;
+}
+
+.header-title h3 {
+  margin: 16px;
+  /* ยกเลิกระยะห่าง */
+  font-family: Prompt;
+  font-size: 2.5em;
+  padding-bottom: 2%;
 }
 
 .header-divider {
@@ -1405,6 +1497,16 @@ li {
   padding-bottom: 3%;
 }
 
-label > span {
-  font-size: 10px;
+.background-half {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  /* แค่ครึ่งหนึ่ง */
+  background-color: #add8e6;
+  /* สีฟ้า */
+  z-index: -1;
+  /* ส่งไปข้างหลัง */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }

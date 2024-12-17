@@ -5,20 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title> Philok Fest </title>
     <link rel="stylesheet" href="style.css">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="responsive.css">
     <!-- <link rel="stylesheet" href="js/leaflet/leaflet.css"> -->
     <link rel="stylesheet" href="btn.css">
     <link rel="stylesheet" href="switch.css">
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="boxicons.css">
+    <link rel="stylesheet" href="imgbox.css">
     <link rel="stylesheet" href="js/L.switchBasemap-master/src/L.switchBasemap.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script> <!-- For CSV Parsing -->
 
@@ -26,6 +28,7 @@
 
 <body>
     <ul class="navbar">
+        <li><a onclick="showContent('home')">หน้าแรก</a></li>
         <li><a onclick="showContent('map1')">แผนที่</a></li>
         <li class="center"> <a onclick="showContent('about')">เกี่ยวกับ</a></li>
         <li class="upward"> <a onclick="showContent('contact')">ติดต่อเรา</a></li>
@@ -149,6 +152,30 @@
         </div>
     </nav>
 
+
+    <!-- หน้าแรก -->
+    <div class="container">
+
+        <div id="home" class="content-section active">
+            <div class="background-half"></div>
+            <div class="header-container3">
+                <div class="header-title">
+                    <h3>โครงการการพัฒนาระบบนิเวศเศรษฐกิจที่ขับเคลื่อนด้วยงานเทศกาลในท้องถิ่นเพื่อยกระดับประเพณีปักธงชัย อําเภอนครไทย จังหวัดพิษณุโลก สู่หนึ่งในเทศกาลสําคัญของชาติและรับรู้ในระดับนานาชาติ</h3>
+                    <hr class="title-underline">
+                    <h3>Ecosystem Development for Festival Economy by Uplifting Local Traditional Event <br>“Pak Thong Chai” towards National Level and International Awareness</h3>
+
+                </div>
+                <!-- <div class="header-divider"></div> -->
+                <!-- <div class="header-description">
+                    <p>
+                    </p>
+                    <p></p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
     <!-- Content Sections -->
     <div class="container">
         <div id="map1" class="content-section active">
@@ -159,8 +186,7 @@
                 <!-- <div class="header-divider"></div> -->
                 <div class="header-description">
                     <p>
-                        โครงการพัฒนาระบบนิเวศเศรษฐกิจที่ขับเคลื่อนด้วยงานเทศการในท้องถิ่นเพื่อยกระดับประเพณีปิยราชัย
-                        อำเภอนครไทย จังหวัดพิษณุโลก สู่หนึ่งในเทศการสำคัญของชาติและรับรู้ในระดับนานาชาติ
+                        การพัฒนาระบบนิเวศเศรษฐกิจที่ขับเคลื่อนด้วยงานเทศกาลในท้องถิ่นเพื่อยกระดับประเพณีปักธงชัย อําเภอนครไทย จังหวัดพิษณุโลก สู่หนึ่งในเทศกาล สําคัญของชาติและรับรู้ในระดับนานาชาติ
                     </p>
                 </div>
 
@@ -171,20 +197,21 @@
             </div>
 
         </div>
+    </div>
 
-        <!-- about -->
-        <div class="container">
-            <div id="about" class="content-section">
-                <!-- <div class="container"> -->
-                <!-- ทีมพัฒนาระบบ -->
-                <div class="col-md-12">
-                    <h2>คณะวิจัย</h2>
-                    <hr class="title-underline">
-                    <p>
-                        มหาวิทยาลัยนเรศวร Naresuan University
-                    </p>
+    <!-- about -->
+    <div class="container">
+        <div id="about" class="content-section">
+            <!-- <div class="container"> -->
+            <!-- ทีมพัฒนาระบบ -->
+            <div class="col-md-12">
+                <h2>คณะวิจัย</h2>
+                <hr class="title-underline">
+                <p>
+                    มหาวิทยาลัยนเรศวร Naresuan University
+                </p>
 
-                    <!-- <div class="row ">
+                <!-- <div class="row ">
                     <div class="p-t-45 p-b-30">
                         <div class="wrap-text-delicious ">
                             <span class="tit2 t-center">
@@ -201,42 +228,42 @@
                         </div>
                     </div> -->
 
-                    <div class="team-container">
-                        <!-- สมาชิกคนที่ 1 -->
-                        <div class="team-member">
-                            <img src="image/49375.jpg" alt="Profile Picture">
-                            <div class="member-info">
-                                <div class="member-name">Mr.....................</div>
-                                <div class="member-department"><strong>หน่วยงาน :
-                                    </strong>มหาวิทยาลัยนเรศวร</div>
-                                <div class="member-position"><strong>ตำแหน่ง: </strong>นักวิจัย</div>
-                            </div>
+                <div class="team-container">
+                    <!-- สมาชิกคนที่ 1 -->
+                    <div class="team-member">
+                        <img src="image/49375.jpg" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">Mr.....................</div>
+                            <div class="member-department"><strong>หน่วยงาน :
+                                </strong>มหาวิทยาลัยนเรศวร</div>
+                            <div class="member-position"><strong>ตำแหน่ง: </strong>นักวิจัย</div>
                         </div>
+                    </div>
 
-                        <!-- สมาชิกคนที่ 2 -->
-                        <div class="team-member">
-                            <img src="image/49375.jpg" alt="Profile Picture">
-                            <div class="member-info">
-                                <div class="member-name">Mr.....................</div>
-                                <div class="member-department"><strong>หน่วยงาน :
-                                    </strong>มหาวิทยาลัยนเรศวร</div>
-                                <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
-                            </div>
+                    <!-- สมาชิกคนที่ 2 -->
+                    <div class="team-member">
+                        <img src="image/49375.jpg" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">Mr.....................</div>
+                            <div class="member-department"><strong>หน่วยงาน :
+                                </strong>มหาวิทยาลัยนเรศวร</div>
+                            <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
                         </div>
+                    </div>
 
-                        <!-- สมาชิกคนที่ 3 -->
-                        <div class="team-member">
-                            <img src="image/49375.jpg" alt="Profile Picture">
-                            <div class="member-info">
-                                <div class="member-name">Mr.....................</div>
-                                <div class="member-department"><strong>หน่วยงาน :
-                                    </strong>มหาวิทยาลัยนเรศวร</div>
-                                <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
-                            </div>
+                    <!-- สมาชิกคนที่ 3 -->
+                    <div class="team-member">
+                        <img src="image/49375.jpg" alt="Profile Picture">
+                        <div class="member-info">
+                            <div class="member-name">Mr.....................</div>
+                            <div class="member-department"><strong>หน่วยงาน :
+                                </strong>มหาวิทยาลัยนเรศวร</div>
+                            <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
                         </div>
+                    </div>
 
-                        <!-- สมาชิกคนที่ 4 -->
-                        <!-- <div class="team-member">
+                    <!-- สมาชิกคนที่ 4 -->
+                    <!-- <div class="team-member">
                             <img src="image/NULOGO.png" alt="Profile Picture">
                             <div class="member-info">
                                 <div class="member-name">นางสาวกมลฉัตร ศรีจะตะ</div>
@@ -245,8 +272,8 @@
                                 <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
                             </div>
                         </div> -->
-                        <!-- สมาชิกคนที่ 5 -->
-                        <!-- <div class="team-member">
+                    <!-- สมาชิกคนที่ 5 -->
+                    <!-- <div class="team-member">
                             <img src="image/NULOGO.png" alt="Profile Picture">
                             <div class="member-info">
                                 <div class="member-name">นางสุพรรณี สงวนพัฒน์</div>
@@ -255,8 +282,8 @@
                                 <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่บริหารงานทั่วไป</div>
                             </div>
                         </div> -->
-                        <!-- สมาชิกคนที่ 6 -->
-                        <!-- <div class="team-member">
+                    <!-- สมาชิกคนที่ 6 -->
+                    <!-- <div class="team-member">
                             <img src="image/NULOGO.png" alt="Profile Picture">
                             <div class="member-info">
                                 <div class="member-name">นายชินกฤต แถมพยัคฆ์</div>
@@ -266,10 +293,10 @@
                             </div>
                         </div> -->
 
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -289,13 +316,11 @@
                             </p>
                         </div>
                         <div class="responsive-container-block" id="i2cbk">
-                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
-                                id="i10mt-3">
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-3">
                                 <p class="text-blk input-title">
                                     FIRST NAME
                                 </p>
-                                <input class="input" id="ijowk-3" name="FirstName"
-                                    placeholder="Please enter first name...">
+                                <input class="input" id="ijowk-3" name="FirstName" placeholder="Please enter first name...">
                             </div>
                             <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ip1yp">
                                 <p class="text-blk input-title">
@@ -307,11 +332,9 @@
                                 <p class="text-blk input-title">
                                     PHONE NUMBER
                                 </p>
-                                <input class="input" id="imgis-3" name="PhoneNumber"
-                                    placeholder="Please enter phone number...">
+                                <input class="input" id="imgis-3" name="PhoneNumber" placeholder="Please enter phone number...">
                             </div>
-                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
-                                id="i634i-3">
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-3">
                                 <p class="text-blk input-title">
                                     WHAT DO YOU HAVE IN MIND ?
                                 </p>
@@ -336,20 +359,16 @@
 
                         <div class="social-media-links mob">
                             <a class="social-icon-link" href="#" id="ix94i-2-2">
-                                <img class="link-img image-block"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
+                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
                             </a>
                             <a class="social-icon-link" href="#" id="itixd">
-                                <img class="link-img image-block"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
+                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
                             </a>
                             <a class="social-icon-link" href="#" id="izxvt">
-                                <img class="link-img image-block"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
+                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
                             </a>
                             <a class="social-icon-link" href="#" id="izldf-2-2">
-                                <img class="link-img image-block"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
+                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
                             </a>
                         </div>
                     </div>
@@ -370,12 +389,16 @@
     </section> -->
 
 
-    <div class="footer"><span id="year"></span><a onclick="showContent('map1')"><span>แผนที่</span></a><a
-            onclick="showContent('about')"><span>เกี่ยวกับ</span></a><a
-            onclick="showContent('contact')"><span>ติดต่อเรา</span></a> &copy; 2024-2029 Naresuan University | All
-        Rights
-        Reserved.
-        </span>
+    <div class="footer">
+        <span id="year"></span>
+        <!-- <a onclick="showContent('map1')">
+            <span>แผนที่</span></a>
+        <a onclick="showContent('about')">
+            <span>เกี่ยวกับ</span></a>
+        <a onclick="showContent('contact')">
+            <span>ติดต่อเรา</span></a>  -->
+        &copy; 2024-2029 Naresuan University | All Rights Reserved.
+
     </div>
     <!-- Footer -->
 
@@ -393,6 +416,7 @@
     <script src="js/L.switchBasemap-master/src/L.switchBasemap.js"></script>
     <script src="js/places.js"></script>
     <script src="js/maps.js"></script>
+    <script src="js/bar.js"></script>
     <!-- <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
 
 </body>
