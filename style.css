@@ -23,6 +23,10 @@ span {
   font-size: 20px;
 }
 
+label > span {
+  font-size: 10px;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
