@@ -621,7 +621,7 @@ input[type="date" i] {
     top: 0;
     left: 0;
     z-index: 100;
-    border-top: 5px solid #03a9f4;
+    border-top: 5px solid #000000;
 }
 
 .wrap_header {
@@ -986,7 +986,7 @@ input[type="date" i] {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     border-radius: 50%;
-    z-index: 200;
+    z-index: 70;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
