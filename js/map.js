@@ -202,6 +202,8 @@ Papa.parse(csvUrl, {
         data.forEach((row) => {
             const place = row.Place || "";
             const detail = row.Detail || "";
+            const image = row.Imageurl || "";
+            const pictrue = row.Pictrue || "";
             const latitude = parseFloat(row.Latitude);
             const longitude = parseFloat(row.Longitude);
 
@@ -220,7 +222,7 @@ Papa.parse(csvUrl, {
                 // Create a marker with a custom icon
                 const marker = L.marker([latitude, longitude], {
                     icon: createCustomIcon(iconUrl),
-                }).bindPopup(`<b>Place:</b> ${place}</br><b>Dtail:</b> ${detail}`);
+                }).bindPopup(` <img class="circular-image"src=${image}><br> <div class="container"> <b> ${place}</b></div></br><p> ${detail}</p> <br><img src=${pictrue}>`);
 
                 // Add marker to the appropriate category layer
                 layers[category].addLayer(marker);
