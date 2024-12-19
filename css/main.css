@@ -182,6 +182,15 @@ p-2 {
     text-align: justify;
 }
 
+p-3 {
+    font-family: Prompt;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.7;
+    color: #000000;
+    margin: 0px;
+}
+
 .row {
     display: flex;
     margin-right: 0px;
