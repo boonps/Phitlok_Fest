@@ -1,421 +1,415 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
+    <title>Home</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title> Philok Fest </title>
-    <link rel="stylesheet" href="style.css">
-    <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="responsive.css">
-    <!-- <link rel="stylesheet" href="js/leaflet/leaflet.css"> -->
-    <link rel="stylesheet" href="btn.css">
-    <link rel="stylesheet" href="switch.css">
-    <link rel="stylesheet" href="map.css">
-    <link rel="stylesheet" href="boxicons.css">
-    <link rel="stylesheet" href="imgbox.css">
-    <link rel="stylesheet" href="js/L.switchBasemap-master/src/L.switchBasemap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/NULOGO.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
 </head>
 
-<body>
-    <ul class="navbar">
-        <li><a onclick="showContent('home')">หน้าแรก</a></li>
-        <li><a onclick="showContent('map1')">แผนที่</a></li>
-        <li class="center"> <a onclick="showContent('about')">เกี่ยวกับ</a></li>
-        <li class="upward"> <a onclick="showContent('contact')">ติดต่อเรา</a></li>
-        <!-- <li class="forward"><a href="#">Feedback</a></li> -->
-        <div class="btn-container">
-
-            <!-- <label class="switch btn-color-mode-switch">
-		        <input value="1" id="color_mode" name="color_mode" type="checkbox">
-		        <label class="btn-color-mode-switch-inner" data-off="TH" data-on="EN" for="color_mode"></label>
-            </label> -->
-
-        </div>
-
-    </ul>
+<body class="animsition">
 
 
-    <!-- sidebar -->
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="image/NULOGO.png" alt="">
-                </span>
+    <!-- Header -->
+    <header>
+        <!-- Header desktop -->
+        <div class="wrap-menu-header gradient1 trans-0-4">
+            <div class="container h-full">
+                <div class="wrap_header trans-0-3">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/icons/NULOGO.png" alt="IMG-LOGO" data-logofixed="images/icons/NULOGO.png">
+                        </a>
+                    </div>
 
-                <div class="text logo-text">
-                    <span class="name">Phitlok Fest</span>
-                    <span class="profession">Naresuan University</span>
+                    <!-- Menu -->
+                    <div class="wrap_menu p-l-45 p-l-0-xl">
+                        <nav class="menu">
+                            <ul class="main_menu">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+
+                                <!-- <li>
+									<a href="menu.html">Menu</a>
+								</li> -->
+
+                                <li>
+                                    <a href="reservation.html">Map</a>
+                                </li>
+
+                                <!-- <li>
+									<a href="gallery.html">Gallery</a>
+								</li> -->
+
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+
+                                <!-- <li>
+									<a href="blog.html">Blog</a>
+								</li> -->
+
+                                <!-- <li>
+                                    <a href="contact.html">Contact</a>
+                                </li> -->
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="social flex-w flex-l-m p-r-20">
+                        <!-- <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a> -->
+
+                        <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+                    </div>
                 </div>
             </div>
-
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-
-                <li class="search-box">
-                    <!-- <i class='bx bx-search icon'></i> -->
-                    <span class="text nav-text">เมนูวัฒนธรรม</span>
-                </li>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-home-alt icon'></i>
-                            <span class="text2 nav-text">ภูเขา</span>
-                            <label class="switch">
-                                <input type="checkbox" />
-                                <span class="slider"></span>
-                            </label>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bar-chart-alt-2 icon'></i>
-                            <span class="text3 nav-text">วัด</span>
-                            <label class="switch">
-                                <input type="checkbox" />
-                                <span class="slider2"></span>
-                            </label>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text4 nav-text">สถานที่สำคัญ</span>
-                            <label class="switch">
-                                <input type="checkbox" />
-                                <span class="slider3"></span>
-                            </label>
-                        </a>
-                    </li>
-
-                    <!-- <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-pie-chart-alt icon'></i>
-                            <span class="text nav-text">Analytics</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-heart icon'></i>
-                            <span class="text nav-text">Likes</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-wallet icon'></i>
-                            <span class="text nav-text">Wallets</span>
-                        </a>
-                    </li> -->
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <!-- <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon'></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li> -->
-
-                <li class="mode">
-                    <!-- <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div> -->
-                    <span class="mode-text text">powered by <img src="image/NULOGO.png" alt="logoimg"></span>
-
-                    <!-- <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div> -->
-                </li>
-
-            </div>
         </div>
-    </nav>
+    </header>
 
+    <!-- Sidebar -->
+    <aside class="sidebar trans-0-4">
+        <!-- Button Hide sidebar -->
+        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
 
-    <!-- หน้าแรก -->
-    <div class="container">
+        <!-- - -->
+        <ul class="menu-sidebar p-t-95 p-b-70">
+            <li class="t-center m-b-13">
+                <a href="index.html" class="txt19">Home</a>
+            </li>
 
-        <div id="home" class="content-section active">
-            <div class="background-half"></div>
-            <div class="header-container3">
-                <div class="header-title">
-                    <h3>โครงการการพัฒนาระบบนิเวศเศรษฐกิจที่ขับเคลื่อนด้วยงานเทศกาลในท้องถิ่นเพื่อยกระดับประเพณีปักธงชัย อําเภอนครไทย จังหวัดพิษณุโลก สู่หนึ่งในเทศกาลสําคัญของชาติและรับรู้ในระดับนานาชาติ</h3>
-                    <hr class="title-underline">
-                    <h3>Ecosystem Development for Festival Economy by Uplifting Local Traditional Event <br>“Pak Thong Chai” towards National Level and International Awareness</h3>
+            <!-- <li class="t-center m-b-13">
+				<a href="menu.html" class="txt19">Menu</a>
+			</li> -->
 
+            <!-- <li class="t-center m-b-13">
+                <a href="gallery.html" class="txt19">Gallery</a>
+            </li> -->
+
+            <li class="t-center m-b-13">
+                <a href="about.html" class="txt19">About</a>
+            </li>
+
+            <!-- <li class="t-center m-b-13">
+				<a href="blog.html" class="txt19">Blog</a>
+			</li> -->
+
+            <li class="t-center m-b-33">
+                <a href="contact.html" class="txt19">Contact</a>
+            </li>
+
+            <li class="t-center">
+                <!-- Button3 -->
+                <a href="reservation.html" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+					Map
+				</a>
+            </li>
+        </ul>
+
+        <!-- - -->
+        <!-- <div class="gallery-sidebar t-center p-l-60 p-r-60 p-b-40">
+			-
+			<h4 class="txt20 m-b-33">
+				Gallery
+			</h4> -->
+
+        <!-- Gallery -->
+        <!-- <div class="wrap-gallery-sidebar flex-w">
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-01.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-01.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-02.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-02.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-03.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-03.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-05.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-05.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-06.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-06.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-07.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-07.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-09.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-09.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-10.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-10.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-11.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-11.jpg" alt="GALLERY">
+				</a>
+			</div> -->
+        </div>
+    </aside>
+
+    <!-- Slide1 -->
+    <section class="section-slide">
+        <div class="wrap-slick1">
+            <div class="slick1">
+                <div class="item-slick1 item1-slick1" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.78)),url(images/ปักธงชัย3.jpg);">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                        <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+							ยินดีต้อนรับ
+						</span>
+
+                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+                            ประเพณีปักธงชัย
+                        </h2>
+
+                        <div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+                            <!-- Button1 -->
+                            <a href="reservation.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
+								Go to MAP
+							</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="header-divider"></div> -->
-                <!-- <div class="header-description">
-                    <p>
-                    </p>
-                    <p></p>
-                </div> -->
+
+                <div class="item-slick1 item2-slick1" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.78)),url(images/ปักธงชัย5.jpg);">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                        <!-- <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
+							
+						</span>
+
+                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
+                            
+                        </h2>
+
+                        <div class="wrap-btn-slide1 animated visible-false" data-appear="slideInUp">
+                            Button1
+                            <a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
+								
+							</a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="item-slick1 item3-slick1" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.78)),url(images/ปักธงชัย6.jpg);">
+                    <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+                        <!-- <span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
+							Welcome to
+						</span>
+
+                        <h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
+                            Festival Place 2
+                        </h2>
+
+                        <div class="wrap-btn-slide1 animated visible-false" data-appear="rotateIn">
+                            Button1
+                            <a href="menu.html" class="btn1 flex-c-m size1 txt3 trans-0-4">
+								Look Detail
+							</a>
+                        </div> -->
+                    </div>
+                </div>
+
             </div>
+
+            <div class="wrap-slick1-dots"></div>
         </div>
+    </section>
+
+
+    <div class="wrap-slick1-dots"></div>
     </div>
+    </section>
 
-
-    <!-- Content Sections -->
-    <div class="container">
-        <div id="map1" class="content-section active">
-            <div class="header-container">
-                <div class="header-title">
-                    <h2>Cultural Site Map</h2>
-                </div>
-                <!-- <div class="header-divider"></div> -->
-                <div class="header-description">
-                    <p>
-                        การพัฒนาระบบนิเวศเศรษฐกิจที่ขับเคลื่อนด้วยงานเทศกาลในท้องถิ่นเพื่อยกระดับประเพณีปักธงชัย อําเภอนครไทย จังหวัดพิษณุโลก สู่หนึ่งในเทศกาล สําคัญของชาติและรับรู้ในระดับนานาชาติ
-                    </p>
-                </div>
-
-
-
-                <div id="map"></div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!-- about -->
-    <div class="container">
-        <div id="about" class="content-section">
-            <!-- <div class="container"> -->
-            <!-- ทีมพัฒนาระบบ -->
-            <div class="col-md-12">
-                <h2>คณะวิจัย</h2>
+    <!-- Welcome -->
+    <section class="bg6-pattern p-t-50 p-b-30 t-center p-l-15 p-r-15">
+        <div class="header-container3">
+            <div class="header-title">
+                <h3>โครงการการพัฒนาระบบนิเวศเศรษฐกิจที่ขับเคลื่อนด้วยงานเทศกาลในท้องถิ่นเพื่อยกระดับประเพณีปักธงชัย อําเภอนครไทย จังหวัดพิษณุโลก สู่หนึ่งในเทศกาลสําคัญของชาติและรับรู้ในระดับนานาชาติ</h3>
                 <hr class="title-underline">
-                <p>
-                    มหาวิทยาลัยนเรศวร Naresuan University
-                </p>
+                <h3>Ecosystem Development for Festival Economy by Uplifting Local Traditional Event <br>“Pak Thong Chai” towards National Level and International Awareness</h3>
 
-                <!-- <div class="row ">
-                    <div class="p-t-45 p-b-30">
-                        <div class="wrap-text-delicious ">
-                            <span class="tit2 t-center">
-                            about team
-                        </span>
-
-                            <h3 id="sdt" class="tit12 t-center m-b-35 m-t-5">
-                                ทีมพัฒนาระบบ
-                            </h3>
-
-                            <p id="sdt_more">
-                                ทีมพัฒนาระบบเว็บไซต์ โดยทีมจาก สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง (GISTNU) ประกอบด้วย
-                            </p>
-                        </div>
-                    </div> -->
-
-                <div class="team-container">
-                    <!-- สมาชิกคนที่ 1 -->
-                    <div class="team-member">
-                        <img src="image/49375.jpg" alt="Profile Picture">
-                        <div class="member-info">
-                            <div class="member-name">Mr.....................</div>
-                            <div class="member-department"><strong>หน่วยงาน :
-                                </strong>มหาวิทยาลัยนเรศวร</div>
-                            <div class="member-position"><strong>ตำแหน่ง: </strong>นักวิจัย</div>
-                        </div>
-                    </div>
-
-                    <!-- สมาชิกคนที่ 2 -->
-                    <div class="team-member">
-                        <img src="image/49375.jpg" alt="Profile Picture">
-                        <div class="member-info">
-                            <div class="member-name">Mr.....................</div>
-                            <div class="member-department"><strong>หน่วยงาน :
-                                </strong>มหาวิทยาลัยนเรศวร</div>
-                            <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
-                        </div>
-                    </div>
-
-                    <!-- สมาชิกคนที่ 3 -->
-                    <div class="team-member">
-                        <img src="image/49375.jpg" alt="Profile Picture">
-                        <div class="member-info">
-                            <div class="member-name">Mr.....................</div>
-                            <div class="member-department"><strong>หน่วยงาน :
-                                </strong>มหาวิทยาลัยนเรศวร</div>
-                            <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
-                        </div>
-                    </div>
-
-                    <!-- สมาชิกคนที่ 4 -->
-                    <!-- <div class="team-member">
-                            <img src="image/NULOGO.png" alt="Profile Picture">
-                            <div class="member-info">
-                                <div class="member-name">นางสาวกมลฉัตร ศรีจะตะ</div>
-                                <div class="member-department"><strong>หน่วยงาน :
-                                </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
-                                <div class="member-position"><strong>ตำแหน่ง : </strong>นักวิจัย</div>
-                            </div>
-                        </div> -->
-                    <!-- สมาชิกคนที่ 5 -->
-                    <!-- <div class="team-member">
-                            <img src="image/NULOGO.png" alt="Profile Picture">
-                            <div class="member-info">
-                                <div class="member-name">นางสุพรรณี สงวนพัฒน์</div>
-                                <div class="member-department"><strong>หน่วยงาน :
-                                </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
-                                <div class="member-position"><strong>ตำแหน่ง : </strong>เจ้าหน้าที่บริหารงานทั่วไป</div>
-                            </div>
-                        </div> -->
-                    <!-- สมาชิกคนที่ 6 -->
-                    <!-- <div class="team-member">
-                            <img src="image/NULOGO.png" alt="Profile Picture">
-                            <div class="member-info">
-                                <div class="member-name">นายชินกฤต แถมพยัคฆ์</div>
-                                <div class="member-department"><strong>หน่วยงาน :
-                                </strong>สถานภูมิภาคเทคโนโลยีอวกาศและภูมิสารสนเทศ ภาคเหนือตอนล่าง</div>
-                                <div class="member-position"><strong>ตำแหน่ง : </strong>ผู้ช่วยโครงการ</div>
-                            </div>
-                        </div> -->
-
-                </div>
             </div>
+
         </div>
-    </div>
-    </div>
+        <!-- <span class="tit2 t-center">
+			
+		</span>
 
 
-    <!-- contacts -->
-    <!-- <div class="container"> -->
-    <div id="contact" class="content-section">
-        <div class="contact_us_6">
-            <div class="responsive-container-block container">
-                <form class="form-box">
-                    <div class="container-block form-wrapper">
-                        <div class="mob-text">
-                            <p class="text-blk contactus-head">
-                                ติดต่อเรา
-                            </p>
-                            <p class="text-blk contactus-subhead">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis diam lectus sapien.
-                            </p>
-                        </div>
-                        <div class="responsive-container-block" id="i2cbk">
-                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-3">
-                                <p class="text-blk input-title">
-                                    FIRST NAME
-                                </p>
-                                <input class="input" id="ijowk-3" name="FirstName" placeholder="Please enter first name...">
-                            </div>
-                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ip1yp">
-                                <p class="text-blk input-title">
-                                    EMAIL
-                                </p>
-                                <input class="input" id="ipmgh-3" name="Email" placeholder="Please enter email...">
-                            </div>
-                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="ih9wi">
-                                <p class="text-blk input-title">
-                                    PHONE NUMBER
-                                </p>
-                                <input class="input" id="imgis-3" name="PhoneNumber" placeholder="Please enter phone number...">
-                            </div>
-                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-3">
-                                <p class="text-blk input-title">
-                                    WHAT DO YOU HAVE IN MIND ?
-                                </p>
-                                <textarea class="textinput" id="i5vyy-3" placeholder="Please enter query..."></textarea>
-                            </div>
-                        </div>
-                        <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2">
-                            Submit
-                        </button>
-                    </div>
-                </form>
-                <div class="responsive-cell-block wk-desk-7 wk-ipadp-12 wk-tab-12 wk-mobile-12" id="i772w">
-                    <div class="map-part">
-                        <p class="text-blk map-contactus-head" id="w-c-s-fc_p-1-dm-id">
-                            Naresuan University
-                        </p>
-                        <p class="text-blk map-contactus-subhead">
-                            Naresuan University มหาวิทยาลัยนเรศวร
-                        </p>
-                        <div class="map-box container-block">
-                        </div>
 
-                        <div class="social-media-links mob">
-                            <a class="social-icon-link" href="#" id="ix94i-2-2">
-                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
-                            </a>
-                            <a class="social-icon-link" href="#" id="itixd">
-                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
-                            </a>
-                            <a class="social-icon-link" href="#" id="izxvt">
-                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
-                            </a>
-                            <a class="social-icon-link" href="#" id="izldf-2-2">
-                                <img class="link-img image-block" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h1 class="t-center size32 m-l-r-auto">
+            โครงการการพัฒนาระบบนิเวศเศรษฐกิจที่ขับเคลื่อนด้วยงานเทศกาลในท้องถิ่นเพื่อยกระดับประเพณีปักธงชัย อําเภอนครไทย จังหวัดพิษณุโลก สู่หนึ่งในเทศกาลสําคัญของชาติและรับรู้ในระดับนานาชาติ
+        </h1>
+        <h1 class="t-center size32 m-l-r-auto">
+            Ecosystem Development for Festival Economy by Uplifting Local Traditional Event “Pak Thong Chai” towards National Level and International Awareness
+        </h1> -->
+    </section>
+
+    <!-- Intro -->
+    <section class="section-intro">
+        <div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url(images/ปักธงชัย1.jpg);">
+            <span class="tit2 p-l-15 p-r-15">
+				Pak Thong Chai
+			</span>
+
+            <h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+                Festival Economy
+            </h3>
         </div>
-        <!-- <h1>Contact</h1> -->
-        <!-- <p>This is the contact page content. Here you can put contact details.</p> -->
-        <!-- <image src="image/NULOGO.png"></image> -->
+    </section>
 
-    </div>
-    <!-- </div> -->
 
-    <!-- <section class="map_box">
+    <!-- <footer class="site-footer">
         <div class="container">
-            <div class="wrap-form-map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" id=" map " style="height: 400px;"></div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify"> </p>
+                </div>
+
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
         </div>
-    </section> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+
+                    </p>
+                </div>
 
 
-    <div class="footer">
-        <span id="year"></span>
-        <!-- <a onclick="showContent('map1')">
-            <span>แผนที่</span></a>
-        <a onclick="showContent('about')">
-            <span>เกี่ยวกับ</span></a>
-        <a onclick="showContent('contact')">
-            <span>ติดต่อเรา</span></a>  -->
-        &copy; 2024-2029 Naresuan University | All Rights Reserved.
+            </div>
+        </div>
+    </footer> -->
 
-    </div>
     <!-- Footer -->
+    <footer class="bg1">
+        <div class="end-footer bg2">
+            <div class="container">
+                <div class="flex-sb-m flex-w p-t-22 p-b-22">
+                    <div class="p-t-5 p-b-5">
 
-    <!-- <div class="footer">
-        &copy; 2024 – 2029 Naresuan University | All Rights Reserved
-        <br>
-        <a href="#">Privacy Policy</a> |
-        <a href="#">Terms of Service</a>
-    </div> -->
+                    </div>
+
+                    <div class="txt17 p-r-20 p-t-5 p-b-5">
+                        &copy; 2024-2029 Naresuan University | All Rights Reserved.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top bg0-hov" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+    </div>
+
+    <!-- Container Selection1 -->
+    <div id="dropDownSelect1"></div>
+
+    <!-- Modal Video 01-->
+    <div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal-dialog" role="document" data-dismiss="modal">
+            <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+
+            <div class="wrap-video-mo-01">
+                <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
+                <div class="video-mo-01">
+                    <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
-    <script src="js/sidebar.js"></script>
-    <script src="js/leaflet/leaflet.js"></script>
-    <script src="js/L.switchBasemap-master/src/L.switchBasemap.js"></script>
-    <script src="js/places.js"></script>
-    <script src="js/maps.js"></script>
-    <script src="js/bar.js"></script>
-    <!-- <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/parallax100/parallax100.js"></script>
+    <script type="text/javascript">
+        $('.parallax100').parallax100();
+    </script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
 
 </body>
 

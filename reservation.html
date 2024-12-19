@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Map</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/NULOGO.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="js/leaflet/leaflet.css" />
+    <script src="js/leaflet/leaflet.js"></script>
+    <!--===============================================================================================-->
+    <link href="js/plugins/L.switchBasemap/src/L.switchBasemap.css" rel="stylesheet">
+    <script src="js/plugins/L.switchBasemap/src/L.switchBasemap.js"></script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="js/plugins/leaflet-sidebar/src/L.Control.Sidebar.css" />
+    <!--===============================================================================================-->
+    <!-- <link rel="stylesheet" href="js/plugins/Leaflet.contextmenu/dist/leaflet.contextmenu.css" /> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <!--===============================================================================================-->
+
+
+</head>
+
+<body class="animsition">
+
+    <!-- Header -->
+    <header>
+        <!-- Header desktop -->
+        <div class="wrap-menu-header gradient1 trans-0-4">
+            <div class="container h-full">
+                <div class="wrap_header trans-0-3">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/icons/NULOGO.png" alt="IMG-LOGO" data-logofixed="images/icons/NULOGO.png">
+                        </a>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="wrap_menu p-l-45 p-l-0-xl">
+                        <nav class="menu">
+                            <ul class="main_menu">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+
+                                <!-- <li>
+									<a href="menu.html">Menu</a>
+								</li> -->
+
+                                <li>
+                                    <a href="reservation.html">Map</a>
+                                </li>
+
+                                <!-- <li>
+									<a href="gallery.html">Gallery</a>
+								</li> -->
+
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+
+                                <!-- <li>
+									<a href="blog.html">Blog</a>
+								</li> -->
+
+                                <!-- <li>
+                                    <a href="contact.html">Contact</a>
+                                </li> -->
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="social flex-w flex-l-m p-r-20">
+                        <!-- <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a> -->
+
+                        <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar trans-0-4">
+        <!-- Button Hide sidebar -->
+        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+        <!-- - -->
+        <ul class="menu-sidebar p-t-95 p-b-70">
+            <li class="t-center m-b-13">
+                <a href="index.html" class="txt19">Home</a>
+            </li>
+
+            <!-- <li class="t-center m-b-13">
+				<a href="menu.html" class="txt19">Menu</a>
+			</li> -->
+            <!-- 
+			<li class="t-center m-b-13">
+				<a href="gallery.html" class="txt19">Gallery</a>
+			</li> -->
+
+            <li class="t-center m-b-13">
+                <a href="about.html" class="txt19">About</a>
+            </li>
+
+            <!-- <li class="t-center m-b-13">
+				<a href="blog.html" class="txt19">Blog</a>
+			</li> -->
+
+            <!-- <li class="t-center m-b-33">
+                <a href="contact.html" class="txt19">Contact</a>
+            </li> -->
+
+            <li class="t-center">
+                <!-- Button3 -->
+                <a href="reservation.html" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+					Map
+				</a>
+            </li>
+        </ul>
+
+        <!-- - -->
+
+
+        <!-- Gallery -->
+        <!-- <div class="wrap-gallery-sidebar flex-w">
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-01.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-01.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-02.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-02.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-03.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-03.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-05.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-05.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-06.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-06.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-07.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-07.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-09.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-09.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-10.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-10.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-11.jpg"
+					data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-11.jpg" alt="GALLERY">
+				</a>
+			</div> -->
+        </div>
+    </aside>
+
+
+    <!-- Title Page -->
+    <!-- <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 1)),url(images/bg-title-page-02-new.jpg);">
+        <h2 class="tit6 t-center">
+            Interactive Map
+        </h2>
+    </section> -->
+    <!-- <section class="bg2-pattern p-t-200 p-b-110 t-center p-l-15 p-r-15">
+        <span class="tit2 t-center">
+			
+		</span>
+
+        <h3 class="tit3 t-center m-b-35 m-t-5">
+            Cultural Site Map
+        </h3>
+
+        <p class="t-center size32 m-l-r-auto">
+            การพัฒนาระบบนิเวศเศรษฐกิจที่ขับเคลื่อนด้วยงานเทศกาลในท้องถิ่นเพื่อยกระดับประเพณีปักธงชัย อําเภอนครไทย จังหวัดพิษณุโลก สู่หนึ่งในเทศกาล สําคัญของชาติและรับรู้ในระดับนานาชาติ
+        </p>
+    </section> -->
+
+
+    <!-- Reservation -->
+    <section class="section-reservation bg8-pattern p-t-100 p-b-10">
+
+        <div class="row">
+            <div class="col-lg-12 p-b-30">
+                <div class="t-center p-b-20">
+                    <span class="tit2 t-center ">
+							
+						</span>
+
+                </div>
+
+
+                <!-- Sidebar Leaflet-->
+                <div id="sidebar">
+                    <h2>Phitlok Fest</h2>
+                    <br>
+                    <!-- Switch Layer -->
+                    <div class="container-switch">
+                        <!-- Switch Layer : 1 -->
+                        <div class="row justify-content-between">
+                            <div class="col-4">
+                                <p-2 class="text-center text-nowrap">ภูเขา</p-2>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="cbx-bangkok" />
+                                    <label for="cbx-bangkok" class="toggle">
+											<span>
+												<svg width="10px" height="10px" viewBox="0 0 10 10">
+													<path
+														d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+													</path>
+												</svg>
+											</span>
+										</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Switch Layer : 2 -->
+                        <div class="row d-flex justify-content-between align-middle">
+                            <div class="col-4">
+                                <i class='bx bx-bar-chart-alt-2 icon'></i>
+                                <p-2 class="text-center text-nowrap">วัด</p-2>
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="cbx-phitsanulok" />
+                                    <label for="cbx-phitsanulok" class="toggle">
+											<span>
+												<svg width="10px" height="10px" viewBox="0 0 10 10">
+													<path
+														d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+													</path>
+												</svg>
+											</span>
+										</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion in Side Bar -->
+                    <!-- <div class="container-accordion">
+                        <ul id="accordion" class="accordion">
+                            <li>
+                                <div class="link"><i class="fa fa-laptop"></i>Laptops<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu">
+                                    <div class="container-switch">
+                                       
+                                        <div class="row justify-content-between">
+                                            <div class="col-4">
+                                                <p class="text-center text-nowrap">Phitsanulok Layer</p>
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                                <div class="checkbox-wrapper">
+                                                    <input type="checkbox" id="cbx-phitsanulok" />
+                                                    <label for="cbx-phitsanulok" class="toggle">
+															<span>
+																<svg width="10px" height="10px" viewBox="0 0 10 10">
+																	<path
+																		d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+																	</path>
+																</svg>
+															</span>
+														</label>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+
+                    <!-- <div class="row d-flex justify-content-between align-middle">
+                                            <div class="col-4">
+                                                <p class="text-center text-nowrap">Phuket Layer</p>
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                                <div class="checkbox-wrapper">
+                                                    <input type="checkbox" id="cbx-phuket" checked />
+                                                    <label for="cbx-phuket" class="toggle">
+															<span>
+																<svg width="10px" height="10px" viewBox="0 0 10 10">
+																	<path
+																		d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+																	</path>
+																</svg>
+															</span>
+														</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li> -->
+                    <!-- <div class="link"><i class="fa fa-tv"></i>Smart TV<i class="fa fa-chevron-down"></i>
+                                </div>
+                                <ul class="submenu">
+                                    <div class="container-switch">
+                                       
+                                        <div class="row justify-content-between">
+                                            <div class="col-4">
+                                                <p class="text-center text-nowrap">Layer 5</p>
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                                <div class="checkbox-wrapper">
+                                                    <input type="checkbox" id="cbx-51-5" />
+                                                    <label for="cbx-51-5" class="toggle">
+															<span>
+																<svg width="10px" height="10px" viewBox="0 0 10 10">
+																	<path
+																		d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+																	</path>
+																</svg>
+															</span>
+														</label>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+                    <!-- Switch Layer : 6 -->
+                    <!-- <div class="row d-flex justify-content-between align-middle">
+                                            <div class="col-4">
+                                                <p class="text-center text-nowrap">Layer 6</p>
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                                <div class="checkbox-wrapper">
+                                                    <input type="checkbox" id="cbx-51-6" />
+                                                    <label for="cbx-51-6" class="toggle">
+															<span>
+																<svg width="10px" height="10px" viewBox="0 0 10 10">
+																	<path
+																		d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+																	</path>
+																</svg>
+															</span>
+														</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li> -->
+                    <!-- <div class="link"><i class="fa fa-mobile"></i>Mobiles<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu">
+                                    <div class="container-switch">
+                                        
+                                        <div class="row justify-content-between">
+                                            <div class="col-4">
+                                                <p class="text-center text-nowrap">Layer 7</p>
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                                <div class="checkbox-wrapper">
+                                                    <input type="checkbox" id="cbx-51-7" />
+                                                    <label for="cbx-51-7" class="toggle">
+															<span>
+																<svg width="10px" height="10px" viewBox="0 0 10 10">
+																	<path
+																		d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+																	</path>
+																</svg>
+															</span>
+														</label>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+
+                    <!-- <div class="row d-flex justify-content-between align-middle">
+                                            <div class="col-4">
+                                                <p class="text-center text-nowrap">Layer 8</p>
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                                <div class="checkbox-wrapper">
+                                                    <input type="checkbox" id="cbx-51-8" />
+                                                    <label for="cbx-51-8" class="toggle">
+															<span>
+																<svg width="10px" height="10px" viewBox="0 0 10 10">
+																	<path
+																		d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+																	</path>
+																</svg>
+															</span>
+														</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li> -->
+                    <!-- <div class="link"><i class="fa fa-globe"></i>Search Engines<i class="fa fa-chevron-down"></i></div>
+                                <ul class="submenu">
+                                    <div class="container-switch">
+                                       
+                                        <div class="row justify-content-between">
+                                            <div class="col-4">
+                                                <p class="text-center text-nowrap">Layer 9</p>
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-center align-items-center">
+                                                <div class="checkbox-wrapper">
+                                                    <input type="checkbox" id="cbx-51-9" />
+                                                    <label for="cbx-51-9" class="toggle">
+															<span>
+																<svg width="10px" height="10px" viewBox="0 0 10 10">
+																	<path
+																		d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+																	</path>
+																</svg>
+															</span>
+														</label>
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+
+                    <div class="row d-flex justify-content-between align-middle">
+                        <div class="col-4">
+                            <p-2 class="text-center text-nowrap">สถานที่สำคัญ</p-2>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center align-items-center">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="cbx-51-10" />
+                                <label for="cbx-51-10" class="toggle">
+													<span>
+													<svg width="10px" height="10px" viewBox="0 0 10 10">
+													<path
+											      d="M5,1 L5,1 C2.790861,1 1,2.790861 1,5 L1,5 C1,7.209139 2.790861,9 5,9 L5,9 C7.209139,9 9,7.209139 9,5 L9,5 C9,2.790861 7.209139,1 5,1 L5,9 L5,1 Z">
+											</path>
+										</svg>
+									</span>
+								</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- Map Leaflet -->
+
+
+        <div class="wrap-form-reservation m-l-r-auto" id="map">
+            <!-- Alert will be inserted here -->
+            <div class="alert-container">
+            </div>
+            <div class="leaflet-top leaflet-right">
+                <div class="leaflet-bar leaflet-control">
+                    <button class="setting-btn">
+									<svg class="svg-icon" fill="none" height="20" viewBox="0 0 20 20" width="20"
+										xmlns="http://www.w3.org/2000/svg">
+										<g stroke="black" stroke-linecap="round" stroke-width="1.5">
+											<circle cx="10" cy="10" r="2.5"></circle>
+											<path clip-rule="evenodd"
+												d="m8.39079 2.80235c.53842-1.51424 2.67991-1.51424 3.21831-.00001.3392.95358 1.4284 1.40477 2.3425.97027 1.4514-.68995 2.9657.82427 2.2758 2.27575-.4345.91407.0166 2.00334.9702 2.34248 1.5143.53842 1.5143 2.67996 0 3.21836-.9536.3391-1.4047 1.4284-.9702 2.3425.6899 1.4514-.8244 2.9656-2.2758 2.2757-.9141-.4345-2.0033.0167-2.3425.9703-.5384 1.5142-2.67989 1.5142-3.21831 0-.33914-.9536-1.4284-1.4048-2.34247-.9703-1.45148.6899-2.96571-.8243-2.27575-2.2757.43449-.9141-.01669-2.0034-.97028-2.3425-1.51422-.5384-1.51422-2.67994.00001-3.21836.95358-.33914 1.40476-1.42841.97027-2.34248-.68996-1.45148.82427-2.9657 2.27575-2.27575.91407.4345 2.00333-.01669 2.34247-.97026z"
+												fill-rule="evenodd"></path>
+										</g>
+									</svg>
+								</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- <div class="info-reservation flex-w ">
+                <div class="size23 w-full-md p-t-40 p-r-30 p-r-0-md">
+                    <h4 class="txt5 m-b-18">
+                        Reserve by Phone
+                    </h4>
+
+                    <p class="size25">
+                        Donec quis euismod purus. Donec feugiat ligula rhoncus, varius nisl sed, tincidunt lectus.
+                        <span class="txt25">Nulla vulputate</span> , lectus vel volutpat efficitur, orci
+                        <span class="txt25">lacus sodales</span> sem, sit amet quam:
+                        <span class="txt24">(001) 345 6889</span>
+                    </p>
+                </div>
+
+                <div class="size24 w-full-md p-t-40">
+                    <h4 class="txt5 m-b-18">
+
+                    </h4>
+
+                    <p class="size26">
+
+                        <span class="txt24">(001) 345 6889</span> , varius nisl sed, tinci-dunt lectus sodales sem.
+                    </p>
+                </div>
+
+            </div> -->
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg1">
+
+
+
+        </div>
+        </div>
+
+        <div class="end-footer bg2">
+            <div class="container">
+                <div class="flex-sb-m flex-w p-t-22 p-b-22">
+                    <div class="p-t-5 p-b-5">
+                        <!-- <a href="#" class="fs-15 c-white"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+					<a href="#" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+					<a href="#" class="fs-15 c-white"><i class="fa fa-twitter m-l-18" aria-hidden="true"></i></a> -->
+                    </div>
+
+                    <div class="txt17 p-r-20 p-t-5 p-b-5">
+                        &copy; 2024-2029 Naresuan University | All Rights Reserved.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top bg0-hov" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+    </div>
+
+    <!-- Container Selection1 -->
+    <div id="dropDownSelect1"></div>
+
+
+
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/parallax100/parallax100.js"></script>
+    <script type="text/javascript">
+        $('.parallax100').parallax100();
+    </script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/plugins/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
+    <!--===============================================================================================-->
+    <!-- <script src="js/plugins/Leaflet.contextmenu/dist/leaflet.contextmenu.js"></script> -->
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/places.js"></script>
+    <script src="js/map.js"></script>
+    <!--===============================================================================================-->
+
+</body>
+
+</html>
