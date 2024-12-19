@@ -789,6 +789,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 
 .circular-image {
+    position: absolute;
     width: 150px;
     /* กำหนดขนาดของรูป */
     height: 150px;
@@ -803,6 +804,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     /* เงาเล็กน้อย */
     margin-left: 80px;
     margin-bottom: 20px;
+    margin-top: -100px;
 }
 
 img {
@@ -820,6 +822,7 @@ b {
     font-weight: bolder;
     text-align: center;
     font-size: 30px;
+    margin-top: 50px;
     color: cornflowerblue;
 }
 
