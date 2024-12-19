@@ -1,0 +1,109 @@
+img {
+    width: 15%;
+    height: auto;
+    margin-bottom: -10px;
+}
+
+.logoimg {
+    width: 20%;
+    height: auto;
+    margin-bottom: -15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+    justify-content: space-around;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 10%;
+    margin-top: 3%;
+}
+
+
+/* การ์ดสำหรับสมาชิกแต่ละคน */
+
+.team-member {
+    background-color: #212121;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+
+/* รูปภาพโปรไฟล์ */
+
+.team-member img {
+    width: 100%;
+    height: 400px;
+    /* กำหนดความสูงคงที่ */
+    object-fit: cover;
+    /* ครอบรูปให้เต็มขนาดที่กำหนด โดยไม่เสียสัดส่วน */
+}
+
+
+/* รายละเอียดในการ์ด */
+
+.member-info {
+    padding: 10px;
+    color: #fff;
+    /* เพิ่ม padding */
+}
+
+.member-name {
+    font-size: 0.99em;
+    /* ปรับขนาดฟอนต์ */
+    font-weight: bold;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+.title-underline {
+    margin-left: 20%;
+    height: 7px;
+    width: 60%;
+    background-color: #03A9F4;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+/* สำหรับการแสดงผลบนหน้าจอโมบาย */
+
+@media (max-width: 600px) {
+    .team-member {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-container {
+        padding: 0 10px;
+    }
+    .card {
+        flex: 1 1 100%;
+        /* ทำให้ card เต็มหน้าจอในหน้าจอเล็ก */
+    }
+}
+
+@media (min-width: 769px) {
+    .team-container {
+        padding: 0 20px;
+    }
+}
